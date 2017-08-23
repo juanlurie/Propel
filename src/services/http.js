@@ -3,7 +3,10 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
 export default {
-  get () {
-    return Vue.http.get('http://httpbin.org/ip')
+  get(url) {
+    return Vue.http.get(url)
+  },
+  post(url, body) {
+    return Vue.http.post(url, body)
   }
 }

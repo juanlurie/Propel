@@ -1,5 +1,6 @@
 <template>
   <div>
+        <v-btn light>Normal</v-btn>
     <img src="../assets/logo.png"> {{test}}
   </div>
 </template>
@@ -19,8 +20,8 @@ export default {
   },
   methods: {
     load: function () {
-      http.get('http://httpbin.org/ip').then(x => {
-        this.test = x.body.origin
+      http.get('http://localhost:3000/users').then(x => {
+        this.test = x.body
       })
     }
   }
